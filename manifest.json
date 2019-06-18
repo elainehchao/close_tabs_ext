@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
 
-    "name": "Elaine's Tab Manager",
+    "name": "Tab-Away",
     "description": "This extension will help Elaine manage her out of control tab usage",
     "version": "1.0",
 
