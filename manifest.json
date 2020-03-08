@@ -2,7 +2,7 @@
     "manifest_version": 2,
 
     "name": "Tab-Away",
-    "description": "This extension will help Elaine manage her out of control tab usage",
+    "description": "This extension will help users manage out of control tab usage",
     "version": "1.0",
 
     "browser_action": {
