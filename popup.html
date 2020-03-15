@@ -16,7 +16,7 @@
         <form>
             <div id="description"><span>Clear tabs that I haven't interacted with in</span></div>
             <div class="input-group">
-                <div id="timeValue"><input type="number" id="timeValueInput" class="form-control" aria-label="Text input with dropdown button"></div>
+                <div id="timeValue"><input type="number" min="0" id="timeValueInput" class="form-control" aria-label="Text input with dropdown button" aria-required="true"></div>
                 <div id="timeUnit">
                     <select class="form-control btn btn-secondary" id="sel1">
                         <option value="minute" class="dropdown-item">Minute(s)</option>
@@ -25,7 +25,11 @@
                     </select>
                 </div>
             </div>
-            <button id="tabAwayBtn" class="btn btn-dark submit">Tab-Away!</button>
+            <footer>
+                <button id="tabAwayBtn" class="btn btn-dark submit" type="submit" aria-disabled="true">Tab-Away!</button>
+                <span id="status"></span>
+            </footer>
+
         </form>
 
         <script src="js/popup.js"></script>

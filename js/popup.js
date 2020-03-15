@@ -32,20 +32,32 @@ function getTimeLimit(currentTime, timeValue, timeUnitValue) {
     return timeLimit;
 }
 
+function setStatus(color, text) {
+    var statusSpan = document.getElementById("status");
+    statusSpan.textContent = text;
+    statusSpan.style.color = color;
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     var tabAwayButton = document.getElementById('tabAwayBtn');
 
     tabAwayButton.addEventListener('click', function () {
-        var timeValue = document.getElementById('timeValueInput').value;
-        var timeUnitSelect = document.getElementById('sel1');
-        var timeUnit = timeUnitSelect.options[timeUnitSelect.selectedIndex].value;
+        var timeValueInput = document.getElementById('timeValueInput');
+        const validTimeValue = timeValueInput.checkValidity();
 
-        chrome.tabs.query({}, function (tabs) {
-            var currentTime = new Date(Date.now());
-            var limit = getTimeLimit(currentTime, timeValue, timeUnit);
-            //            alert("limit " + limit);
-            //            oneDayAgo.setHours(currentTime.getHours() - 24);
-            closeTabs(limit, tabs);
-        });
+        if (validTimeValue) {
+            var timeValue = timeValueInput.value;
+
+            var timeUnitSelect = document.getElementById('sel1');
+            var timeUnit = timeUnitSelect.options[timeUnitSelect.selectedIndex].value;
+
+            chrome.tabs.query({}, function (tabs) {
+                var currentTime = new Date(Date.now());
+                var limit = getTimeLimit(currentTime, timeValue, timeUnit);
+                closeTabs(limit, tabs);
+            });
+        } else {
+            setStatus("red", "Invalid time value");
+        }
     }, false);
 }, false);

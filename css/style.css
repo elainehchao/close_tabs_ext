@@ -40,8 +40,12 @@ form {
     box-sizing: border-box;
 }
 
-.submit {
+footer {
     margin-bottom: 10px;
     position: absolute;
     bottom: 0;
+}
+
+span#status {
+    margin-left: 10px;
 }
