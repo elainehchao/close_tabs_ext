@@ -1,0 +1,47 @@
+html,
+body {
+    height: 200px;
+    width: 350px;
+    background: #d3d3d3;
+    font-family: "Oswald";
+}
+
+h1 {
+    margin: 10px;
+}
+
+#description {
+    font-size: 14px;
+    padding-bottom: 10px;
+    padding-left: 3px;
+}
+
+form {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.input-group {
+    width: 70%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#timeUnit {
+    display: inline-block;
+    width: 60%;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+#timeValue {
+    position: relative;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.submit {
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+}
