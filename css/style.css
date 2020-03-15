@@ -1,13 +1,14 @@
 html,
 body {
-    height: 200px;
-    width: 350px;
+    height: 190px;
+    width: 270px;
     background: #d3d3d3;
     font-family: "Oswald";
 }
 
 h1 {
     margin: 10px;
+    font-size: 24px;
 }
 
 #description {
@@ -22,30 +23,54 @@ form {
 }
 
 .input-group {
-    width: 70%;
+    width: 80%;
     margin: 0px;
     padding: 0px;
 }
 
-#timeUnit {
-    display: inline-block;
-    width: 60%;
-    box-sizing: border-box;
-    margin-left: 10px;
+div#timeValue {
+    width: 100%;
 }
 
-#timeValue {
-    position: relative;
-    width: 30%;
+input#timeValueInput {
+    width: 40%;
     box-sizing: border-box;
+    font-size: 16px;
+}
+
+#timeValueInvalidFeedback {
+    position: absolute;
+    width: 100%;
+}
+
+div#timeUnit {
+    position: absolute;
+    top: 0;
+    right: 50px;
+}
+
+#sel1 {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 10px;
+    font-size: 16px;
 }
 
 footer {
     margin-bottom: 10px;
     position: absolute;
     bottom: 0;
+    font-size: 18px;
 }
 
 span#status {
     margin-left: 10px;
+    font-size: 16px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

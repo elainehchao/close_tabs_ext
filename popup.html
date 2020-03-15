@@ -13,21 +13,26 @@
 
     <body>
         <h1>Tab-Away</h1>
-        <form>
+        <form class="needs-validation" novalidate>
             <div id="description"><span>Clear tabs that I haven't interacted with in</span></div>
             <div class="input-group">
-                <div id="timeValue"><input type="number" min="0" id="timeValueInput" class="form-control" aria-label="Text input with dropdown button" aria-required="true"></div>
-                <div id="timeUnit">
+                <div class="validate-me" id="timeValue">
+                    <input type="number" min="0" id="timeValueInput" class="form-control" aria-label="Text input with dropdown button" aria-required="true" required>
+                    <div class="invalid-feedback" id="timeValueInvalidFeedback">
+                        Please enter a valid integer > 0
+                    </div>
+                </div> <!-- timeValue div -->
+                <div class="input-group-append" id="timeUnit">
                     <select class="form-control btn btn-secondary" id="sel1">
                         <option value="minute" class="dropdown-item">Minute(s)</option>
                         <option value="hour" class="dropdown-item">Hour(s)</option>
                         <option value="day" class="dropdown-item">Day(s)</option>
                     </select>
-                </div>
-            </div>
+                </div><!-- timeUnit div -->
+            </div> <!-- input-group div -->
             <footer>
                 <button id="tabAwayBtn" class="btn btn-dark submit" type="submit" aria-disabled="true">Tab-Away!</button>
-                <span id="status"></span>
+                <!--            <span id="status"></span>-->
             </footer>
 
         </form>
