@@ -1,6 +1,6 @@
 html,
 body {
-    height: 160px;
+    height: 170px;
     width: 250px;
     background: #d3d3d3;
     font-family: "Oswald";
@@ -12,23 +12,24 @@ h1 {
 }
 
 #description {
+    text-align: center;
     font-size: 14px;
-    padding: 10px 0px 10px 3px;
+    padding: 10px 0px 10px 0px;
 }
 
 form {
-    margin-left: 10px;
     width: 100%;
 }
 
 .input-group {
-    width: 80%;
-    margin: 0px;
+    width: 70%;
+    margin: 0 auto;
     padding: 0px;
 }
 
 div#timeValue {
     width: 100%;
+    padding-left: 5px;
 }
 
 input#timeValueInput {
@@ -45,7 +46,7 @@ input#timeValueInput {
 div#timeUnit {
     position: absolute;
     top: 0;
-    right: 40px;
+    right: 5px;
 }
 
 #sel1 {
@@ -56,15 +57,23 @@ div#timeUnit {
     font-size: 16px;
 }
 
-footer {
-    margin-bottom: 10px;
-    position: absolute;
-    bottom: 0;
+#submitAndStatus {
+    margin: 0 auto;
+    padding-top: 30px;
+    /*    position: absolute;*/
+    /*    bottom: 0;*/
     font-size: 18px;
 }
 
+#tabAwayBtn {
+    margin: 0 auto;
+    display: block;
+}
+
 span#status {
-    margin-left: 10px;
+    text-align: center;
+    display: block;
+    margin: 0 auto 10px auto;
     font-size: 16px;
 }
 
