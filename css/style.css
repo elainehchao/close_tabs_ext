@@ -1,7 +1,7 @@
 html,
 body {
-    height: 190px;
-    width: 270px;
+    height: 160px;
+    width: 250px;
     background: #d3d3d3;
     font-family: "Oswald";
 }
@@ -13,8 +13,7 @@ h1 {
 
 #description {
     font-size: 14px;
-    padding-bottom: 10px;
-    padding-left: 3px;
+    padding: 10px 0px 10px 3px;
 }
 
 form {
@@ -46,7 +45,7 @@ input#timeValueInput {
 div#timeUnit {
     position: absolute;
     top: 0;
-    right: 50px;
+    right: 40px;
 }
 
 #sel1 {
