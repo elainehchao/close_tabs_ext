@@ -6,11 +6,13 @@ const timeUnit = {
     DAY: 'day'
 }
 
-function closeTabs(tabAgeLimit, tabs) {
+function closeTabs(tabAgeLimit, tabs, currentTabId) {
     for (var i = 0; i < tabs.length; i++) {
         if (background.tabsToCreationTimeMap[tabs[i].id] < tabAgeLimit) {
-            background.tabsToCreationTimeMap.delete(tabs[i].id);
-            chrome.tabs.remove(tabs[i].id);
+            if (currentTabId && tabs[i].id != currentTabId) {
+                background.tabsToCreationTimeMap.delete(tabs[i].id);
+                chrome.tabs.remove(tabs[i].id);
+            }
         }
     }
 }
@@ -71,6 +73,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const validTimeValue = timeValueInput.checkValidity();
 
         if (validTimeValue) {
+            var currentTabId;
+            chrome.tabs.query({
+                active: true,
+                windowType: "normal",
+                currentWindow: true
+            }, function (tab) {
+                currentTabId = tab[0].id;
+            })
+
             var timeValue = timeValueInput.value;
 
             var timeUnitSelect = document.getElementById('sel1');
@@ -79,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
             chrome.tabs.query({}, function (tabs) {
                 var currentTime = new Date(Date.now());
                 var limit = getTimeLimit(currentTime, timeValue, timeUnit);
-                closeTabs(limit, tabs);
+                closeTabs(limit, tabs, currentTabId);
             });
         } else {
             //            setStatus("red", "Invalid time value");
