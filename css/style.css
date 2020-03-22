@@ -1,9 +1,13 @@
 html,
 body {
-    height: 170px;
-    width: 250px;
-    background: #d3d3d3;
+    height: 172px;
+    width: 252px;
+    background-color: #f6f6f2;
     font-family: "Oswald";
+}
+
+body {
+    border: 1.5px solid #388087;
 }
 
 h1 {
@@ -12,6 +16,7 @@ h1 {
 }
 
 #description {
+    color: #388087;
     text-align: center;
     font-size: 14px;
     padding: 10px 0px 10px 0px;
@@ -36,6 +41,8 @@ input#timeValueInput {
     width: 40%;
     box-sizing: border-box;
     font-size: 16px;
+    background: transparent;
+    border: 1px solid #235952;
 }
 
 #timeValueInvalidFeedback {
@@ -70,11 +77,31 @@ div#timeUnit {
     display: block;
 }
 
+/* styling for submit button */
+.btn-dark,
+.btn-dark:hover,
+.btn-dark:active,
+.btn-dark:visited {
+    background-color: #388087 !important;
+    border: 1px solid #388087;
+    color: #ffffff;
+}
+
+/* styling for time unit select */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:visited {
+    background-color: #f6f6f2 !important;
+    border: 1px solid #388087;
+    color: #6fb3b8;
+}
+
 span#status {
     text-align: center;
     display: block;
-    margin: 0 auto 10px auto;
-    font-size: 16px;
+    margin: 5px auto 10px auto;
+    font-size: 14px;
 }
 
 input::-webkit-outer-spin-button,
