@@ -1,6 +1,6 @@
 html,
 body {
-    height: 172px;
+    height: 175px;
     width: 252px;
     background-color: #f6f6f2;
     font-family: "Oswald";
@@ -91,7 +91,8 @@ div#timeUnit {
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:active,
-.btn-secondary:visited {
+.btn-secondary:visited,
+.btn-secondary:focus {
     background-color: #f6f6f2 !important;
     border: 1px solid #388087;
     color: #6fb3b8;
@@ -100,7 +101,7 @@ div#timeUnit {
 span#status {
     text-align: center;
     display: block;
-    margin: 5px auto 10px auto;
+    margin: 5px auto 0px auto;
     font-size: 14px;
 }
 

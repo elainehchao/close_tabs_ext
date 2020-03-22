@@ -97,7 +97,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 var currentTime = new Date(Date.now());
                 var limit = getTimeLimit(currentTime, timeValue, timeUnit);
                 const numTabsClosed = closeTabs(limit, tabs, currentTabId);
-                setStatus("green", numTabsClosed + " tabs cleaned up!");
+                if (numTabsClosed == 1) {
+                    setStatus("green", numTabsClosed + " tab cleaned up!");
+                } else {
+                    setStatus("green", numTabsClosed + " tabs cleaned up!");
+                }
             });
         } else {
             setStatus("green", "");
